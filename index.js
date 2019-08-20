@@ -15,8 +15,7 @@ class ForpostAppApi extends FastExpress {
       let newBuffer = await image.getBufferAsync(Jimp.MIME_PNG);
       return newBuffer;
     } catch (e) {
-      console.log(e);
-      return "error";
+      return e;
     }
   }
 }
